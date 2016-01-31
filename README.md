@@ -1,1 +1,1 @@
-# [HVIET Summer Program Website]
+# HVIET Summer Program Website
