@@ -7,9 +7,13 @@
     <body>
         <h1>x</h1>
         <a href="#" onclick="onClickClose()">close me</a>
+        <a href="#" onclick="onAddToWishlist()">Add to wishlist</a>
         <script>
         	function onClickClose() {
         		window.webkit.messageHandlers.onCloseWebviewNow.postMessage(null);
+        	}
+          function onAddToWishlist() {
+        		window.webkit.messageHandlers.onAddToWishlistClicked.postMessage("B00JU4QCMC");
         	}
         </script>
     </body>
