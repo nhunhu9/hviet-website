@@ -7,13 +7,21 @@
     <body>
         <h1>x</h1>
         <a href="#" onclick="onClickClose()">close me</a> <br>
-        <a href="#" onclick="onAddToWishlist()">Add to wishlist</a>
+        <a href="#" onclick="onAddToWishlist()">Add to wishlist</a> <br>
+        <a href="#" onclick="onOpenPopupModal()">Open Popup</a>
         <script>
         	function onClickClose() {
         		window.webkit.messageHandlers.onCloseWebviewNow.postMessage(null);
         	}
           function onAddToWishlist() {
         		window.webkit.messageHandlers.onAddToWishlistClicked.postMessage("B00JU4QCMC");
+        	}
+          function onOpenPopupModal() {
+            var message = {
+              url: "https://www.google.com",
+              view: "someview"
+            }
+        		window.webkit.messageHandlers.onAddToWishlistClicked.postMessage(message);
         	}
         </script>
     </body>
