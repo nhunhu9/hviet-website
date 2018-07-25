@@ -14,7 +14,10 @@
         		window.webkit.messageHandlers.onCloseWebviewNow.postMessage(null);
         	}
           function onAddToWishlist() {
-        		window.webkit.messageHandlers.onAddToWishlistClicked.postMessage("B00JU4QCMC");
+            var message = {
+              asin: "B00JU4QCMC"
+            };
+        		window.webkit.messageHandlers.onAddToWishlistClicked.postMessage(message);
         	}
           function onOpenPopupModal() {
             var message = {
