@@ -9,7 +9,7 @@
         <a href="#" onclick="onClickClose()">close me</a> <br>
         <a href="#" onclick="onAddToWishlist()">Add to wishlist</a> <br>
         <a href="#" onclick="onOpenPopupModal()">Open Popup</a> <br>
-        <a href="#" >Start listening</a>
+        <a href="#" onclick="onStartListening()">Start listening</a>
         <script>
         	function onClickClose() {
         		window.webkit.messageHandlers.onCloseWebviewNow.postMessage(null);
@@ -19,6 +19,12 @@
               asin: "B00JU4QCMC"
             };
         		window.webkit.messageHandlers.onAddToWishlistClicked.postMessage(message);
+        	}
+          function onStartListening() {
+            var message = {
+              asin: "B072WWCMYY"
+            };
+        		window.webkit.messageHandlers.onOrderCompleteStartListening.postMessage(message);
         	}
           function onOpenPopupModal() {
             var message = {
