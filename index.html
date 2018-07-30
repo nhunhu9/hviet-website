@@ -9,7 +9,9 @@
         <a href="#" onclick="onClickClose()">close me</a> <br>
         <a href="#" onclick="onAddToWishlist()">Add to wishlist</a> <br>
         <a href="#" onclick="onOpenPopupModal()">Open Popup</a> <br>
-        <a href="#" onclick="onStartReadandListen()">Start read and listen</a>
+        <a href="#" onclick="onStartReadandListen()">Start read and listen</a> <br>
+        <a href="#" onclick="onStartListen()">Start listening</a>
+
         <script>
         	function onClickClose() {
         		window.webkit.messageHandlers.onCloseWebviewNow.postMessage(null);
@@ -22,10 +24,18 @@
         	}
           function onStartReadandListen() {
             var message = {
+              //this is amazon audible asin
               asin: "B00CSJ8V1G"
             };
         		window.webkit.messageHandlers.onOrderCompleteReadAndListen.postMessage(message);
         	}
+          function onStartListen(asin_str) {
+            var message = {
+              //this is amazon audible asin
+              asin: "B00CSJ8V1G"
+            };
+                window.webkit.messageHandlers.onOrderCompleteStartListening.postMessage(message);
+          }
           function onOpenPopupModal() {
             var message = {
               url: "https://www.google.com",
