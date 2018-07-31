@@ -19,7 +19,7 @@
           function onAddToWishlist() {
             var message = {
               //everything i ever told you
-              "kindleAsin" : "B00G3L7V0C"
+              "kindleAsin" : "B00G3L7V0C",
               "amazonAudioBookAsin" : "B00JU4PGI8"
             };
         		window.webkit.messageHandlers.onAddToWishlistClicked.postMessage(message);
@@ -27,7 +27,7 @@
           function onStartReadandListen() {
             var message = {
               // The call of the Wild
-              "kindleAsin" : "B072C7QKRY"
+              "kindleAsin" : "B072C7QKRY",
               "amazonAudioBookAsin" : "B00JU4PGI8"
             };
         		window.webkit.messageHandlers.onOrderCompleteReadAndListen.postMessage(message);
@@ -35,7 +35,7 @@
           function onStartListen() {
             var message = {
               // The call of the Wild
-              "kindleAsin" : "B072C7QKRY"
+              "kindleAsin" : "B072C7QKRY",
               "amazonAudioBookAsin" : "B00CSJ8V1G"
             };
                 window.webkit.messageHandlers.onOrderCompleteStartListening.postMessage(message);
