@@ -18,21 +18,25 @@
         	}
           function onAddToWishlist() {
             var message = {
-              asin: "B00JU4QCMC"
+              //everything i ever told you
+              "kindleAsin" : "B00G3L7V0C"
+              "amazonAudioBookAsin" : "B00JU4PGI8"
             };
         		window.webkit.messageHandlers.onAddToWishlistClicked.postMessage(message);
         	}
           function onStartReadandListen() {
             var message = {
-              //this is amazon audible asin
-              asin: "B00CSJ8V1G"
+              // The call of the Wild
+              "kindleAsin" : "B072C7QKRY"
+              "amazonAudioBookAsin" : "B00JU4PGI8"
             };
         		window.webkit.messageHandlers.onOrderCompleteReadAndListen.postMessage(message);
         	}
           function onStartListen() {
             var message = {
-              //this is amazon audible asin
-              asin: "B072C7QKRY"
+              // The call of the Wild
+              "kindleAsin" : "B072C7QKRY"
+              "amazonAudioBookAsin" : "B00CSJ8V1G"
             };
                 window.webkit.messageHandlers.onOrderCompleteStartListening.postMessage(message);
           }
