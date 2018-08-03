@@ -23,7 +23,9 @@
               "amazonAudioBookAsin" : "B00JU4PGI8",
               "asin": "B00JU4QCMC"
             };
-        		window.webkit.messageHandlers.onAddToWishlistClicked.postMessage(message);
+
+            var message2 = JSON.stringify(message);
+        		window.webkit.messageHandlers.onAddToWishlistClicked.postMessage(message2);
         	}
           function onStartReadandListen() {
             var message = {
